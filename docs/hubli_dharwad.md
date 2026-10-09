@@ -27,5 +27,3 @@ Primary estimate: **Rs 0.0461 crore per year** (about Rs 4.6 lakh) for the city.
 
 ## Figures
 `figures/hubli_dharwad/`: baseline, batching, greedy_vs_smart, financial
-
-[Add one or two lines on anything specific to this city.]
