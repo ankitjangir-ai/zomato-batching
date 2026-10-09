@@ -1,0 +1,12 @@
+{
+  "total_orders": 1515,
+  "total_dispatches": 1515,
+  "total_partners_used": 133,
+  "target_partners_weighted_avg": 138,
+  "total_km_driven": 11882.28,
+  "avg_delivery_distance_km": 4.33,
+  "avg_total_trip_distance_km": 7.84,
+  "missed_batch_count": 25,
+  "missed_batch_pct": 1.65,
+  "baseline_cost_inr": 38352.74
+}

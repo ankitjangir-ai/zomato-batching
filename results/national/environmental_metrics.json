@@ -1,0 +1,56 @@
+{
+  "emission_factor_kg_co2e_per_km": 0.0588,
+  "tree_co2_kg_per_year": 60.0,
+  "HD": {
+    "daily_co2e_saved_kg": {
+      "Q": 8.48,
+      "Avg": 6.39,
+      "P": 4.29
+    },
+    "annual_co2e_saved_tonnes": {
+      "Q": 3.096,
+      "Avg": 2.332,
+      "P": 1.567
+    },
+    "daily_fuel_saved_litres": {
+      "Q": 3.61,
+      "P": 1.83
+    }
+  },
+  "HYD": {
+    "daily_co2e_saved_kg": {
+      "Q": 53.61,
+      "Avg": 48.62,
+      "P": 43.64
+    },
+    "annual_co2e_saved_tonnes": {
+      "Q": 19.566,
+      "Avg": 17.748,
+      "P": 15.93
+    },
+    "daily_fuel_saved_litres": {
+      "Q": 22.79,
+      "P": 18.56
+    }
+  },
+  "National": {
+    "daily_co2e_saved_kg": {
+      "Q": 7978.66,
+      "Avg": 7069.38,
+      "P": 6160.09
+    },
+    "annual_co2e_saved_tonnes": {
+      "Q": 2912.213,
+      "Avg": 2580.323,
+      "P": 2248.433
+    },
+    "annual_fuel_saved_litres": {
+      "Avg": 1096274.0
+    },
+    "equivalent_trees": {
+      "Q": 48537.0,
+      "Avg": 43005.0,
+      "P": 37474.0
+    }
+  }
+}

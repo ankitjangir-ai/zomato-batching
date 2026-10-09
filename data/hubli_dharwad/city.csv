@@ -1,0 +1,2 @@
+city_name,reference_point_name,reference_lat,reference_lon,search_radius_km,crs,bbox_north,bbox_south,bbox_east,bbox_west,node_count,edge_count,network_type,graphml_file
+Hubli-Dharwad,"Indian Institute of Information Technology, Dharwad",15.3926,75.0254,13.0,EPSG:32643,1714671.1447481143,1688824.4216401712,515741.00797379913,489811.1311850927,21078,58476,drive,hubli_dharwad.graphml

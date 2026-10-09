@@ -1,0 +1,18 @@
+{
+  "total_orders": 16856,
+  "total_dispatches": 16856,
+  "total_partners_used": 961,
+  "total_km_driven": 85285.09,
+  "batched_order_count": 260,
+  "batched_pairs_count": 130,
+  "batched_orders_pct": 1.54,
+  "batched_pairs_pct": 0.77,
+  "avg_batch_size": 2.1,
+  "missed_batch_count": 172,
+  "missed_batch_pct": 1.02,
+  "avg_delivery_dist_km": 2.75,
+  "avg_total_trip_dist_km": 5.06,
+  "estimated_cost_inr": 275532.55,
+  "unassigned_orders": 1,
+  "dispatch_rate_pct": 99.99
+}

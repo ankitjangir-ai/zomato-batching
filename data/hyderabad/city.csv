@@ -1,0 +1,2 @@
+city_name,reference_point_name,reference_lat,reference_lon,search_radius_km,crs,bbox_north,bbox_south,bbox_east,bbox_west,node_count,edge_count,network_type,graphml_file
+Hyderabad,"Zero Mile Stone, Nampally, Hyderabad",17.402365,78.468572,20.0,EPSG:32644,1945864.1663911599,1905749.4585083674,251264.01837254057,210936.79409144464,234485,608918,drive,HYD_city.graphml

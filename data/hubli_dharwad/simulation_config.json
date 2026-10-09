@@ -1,0 +1,20 @@
+{
+  "active_partners_normal": 113,
+  "active_partners_peak": 200,
+  "active_partners_night": 70,
+  "peak_hours": [
+    12,
+    13,
+    19,
+    20,
+    21
+  ],
+  "night_hours": [
+    22,
+    23
+  ],
+  "max_orders_per_trip": 3,
+  "fleet_motorcycle_pct": 1.0,
+  "fleet_bike_pct": 0.0,
+  "batch_window_sec": 120
+}
