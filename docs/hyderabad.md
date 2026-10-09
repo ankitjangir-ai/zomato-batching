@@ -19,7 +19,7 @@ Data: `data/hyderabad/`
 Primary estimate: **Rs 0.1861 crore per year** (about Rs 18.6 lakh) for the city.
 
 ## How it differs from Hubli-Dharwad
-The percentage gains are much smaller than in Hubli-Dharwad, but the absolute saving is larger because the city is bigger. [Add your explanation for the smaller percentage gain, in your own words.]
+The percentage gains are much smaller than in Hubli-Dharwad, but the absolute saving is larger because the city is bigger. 
 
 ## Figures
 `figures/hyderabad/`: baseline, batching, greedy_vs_smart, financial
