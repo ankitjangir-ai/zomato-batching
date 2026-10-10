@@ -6,7 +6,7 @@
 |---|---|---|
 | Partners used | -31.6% | -3.5% |
 | Total distance | -38.1% | -1.1% |
-| Missed batch count | -97.4% | -81.2% |
+| Missed batch count | -97.4% | -81.4% |
 | Primary annual saving | Rs 0.0461 crore | Rs 0.1861 crore |
 
 ## What stands out
