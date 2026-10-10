@@ -13,7 +13,7 @@ Data: `data/hyderabad/`
 |--------|---------------------------|
 | Partners used | -3.5% |
 | Total distance | -1.1% |
-| Missed batch count | -81.2% |
+| Missed batch count | -81.4% |
 
 ## Financial estimate
 Primary estimate: **Rs 0.1861 crore per year** (about Rs 18.6 lakh) for the city.
