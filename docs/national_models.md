@@ -9,7 +9,7 @@ The two city results are combined to estimate effects at national scale.
 - National average petrol price: Rs 111.21/L
 
 ## Financial model
-[Describe how the city savings are scaled: per-order saving, then multiplied by national order volume. List the assumptions.]
+The model scales each city saving to national level in four steps. (1) Per-order saving: each city daily cost saving is divided by its simulated daily orders (1,515 for Hubli-Dharwad, 16,856 for Hyderabad), separately for Q, Avg and P. (2) Blending: the two per-order savings are combined as a weighted average by simulated order share, about 8% Hubli-Dharwad and 92% Hyderabad. (3) Scaling: the blended per-order saving is multiplied by national daily orders, which is the notebook average annual order figure divided by 365. (4) Annualising: the daily national saving is multiplied by 365. Avg is the primary scenario, with Q and P as the range. Assumptions: the two simulated cities are treated as representative of all of India, the weighting follows simulated order counts rather than real city shares, and the per-order saving is the same at every order volume.
 Notebook: `notebooks/national/financial_model.ipynb`
 Figures: `figures/national/financial/`
 
