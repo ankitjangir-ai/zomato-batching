@@ -3,19 +3,21 @@
 These are the modelling decisions that were fixed during the project, and the reasons for them.
 
 ## Data anchoring
-All parameters come from published sources instead of assumptions: Eternal (Zomato) annual reports for FY24 to FY26, CDP Scope 3 emissions disclosures, and Census figures. Three-year averages are used consistently.
+Platform-scale inputs come from published sources: Eternal (Zomato) annual reports for FY24 to FY26, CDP Scope 3 emissions disclosures, and Census figures. Three-year averages are used consistently. Some modelling choices are the project's own assumptions rather than published figures, including the student demand uplift, the same-zone (P) batching rule, the generated destination shares, and the mileage used for fuel. These are listed where they are used and in [limitations.md](limitations.md).
 
 Other sources: Goodreturns (petrol prices) and FSSAI guidelines.
 
 ## City model
-- **Supply-side weight:** 0.60
-- **Demand-side weight:** 0.80, with a 1.18 student uplift
+- **Student demand uplift:** 1.18, an assumption made for this project. Final demand weights across each city's zones sum to 1.
 - **GOV/NOV discount rate:** 14.85%, derived from the reports
 - The student uplift applies to **demand only** (orders and restaurants). It is not applied to delivery partners or delivery distance, to avoid double-counting.
 
 ## Batching rules
-- Two orders can be batched only if their destinations are within **0.5 km** of each other. This is checked before any batching is allowed.
-- Synthetic destinations are generated as **20% at the exact same centroid** and **80% within 0 to 0.5 km** of it at random.
+Two eligibility rules are tested, and results are reported as a range:
+- **Q (headline, conservative):** two orders can be batched only if their destinations are within **1.5 km**. This is a fixed threshold anchored to the "1 mile" proximity example in a food-delivery batching patent, rounded down.
+- **P (sensitivity, aggressive):** two orders can be batched only if their destinations are in the **same zone**. This is an assumption made for this project.
+- **Avg (primary):** the mean of the P and Q results, used in the financial and national models.
+- Destinations are generated at zone level, not observed. In Hubli-Dharwad 75% of orders are delivered within the restaurant's own zone, and in Hyderabad 90%. In both cities, 90% of cross-zone orders go to nearby zones.
 - Partner capacity is modelled as hourly shift targets, not as individual partners.
 
 ## Distance measurement
