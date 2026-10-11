@@ -8,7 +8,7 @@ Platform-scale inputs come from published sources: Eternal (Zomato) annual repor
 Other sources: Goodreturns (petrol prices) and FSSAI guidelines.
 
 ## City model
-- **Student demand uplift:** 1.18, an assumption made for this project. Final demand weights across each city's zones sum to 1.
+- **Student demand uplift:** 1.18 in Hubli-Dharwad and 1.09 in Hyderabad, assumptions made for this project (informed by non-official sources). Final demand weights across each city's zones sum to 1.
 - **GOV/NOV discount rate:** 14.85%, derived from the reports
 - The student uplift applies to **demand only** (orders and restaurants). It is not applied to delivery partners or delivery distance, to avoid double-counting.
 

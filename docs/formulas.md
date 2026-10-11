@@ -58,70 +58,20 @@
 
 **Meaning:** National order density anchor.
 
-### F10 — Daily orders scaled to Hyderabad
-**Formula:** `orders/day = 38.65 × 650 × 3.056 × 0.50 × 0.38 × 1.09 ≈ 15,900`
+### F10 — Base daily orders scaled to Hyderabad
+**Formula:** `base orders/day = 38.65 × 650 × 3.056 × 0.50 × 0.38 × 1.09 ≈ 15,900`
 
-**Meaning:** Scales demand to Hyderabad.
+**Meaning:** Base demand level for Hyderabad. It is the anchor for the hourly rates below, not the final daily total.
 
 ### F11 — Baseline hourly rate
 **Formula:** `baseline/hr = 15,900 × 0.39 / 8 = 775`
 
-**Meaning:** Off-peak hourly rate.
+**Meaning:** Fixed order rate for the 9 non-spike hours of the 10:00 to 24:00 order window.
 
 ### F12 — Peak-hour demand
 **Formula:** `spike ~ U{0.90 × peak_avg, 1.10 × peak_avg} = U{1746, 2134}`
 
-**Meaning:** Lunch and dinner hourly rate.
-
-### F13 — Order arrival process
-**Formula:**
-- `N_h ~ Poisson(rate_h)`
-- `timestamp = h × 3600 + U{0, 3599}`
-
-**Meaning:** Models order arrivals over time.
-
-### F14 — Restaurant assignment
-**Formula:** `restaurant ~ Categorical(popularity_weight)`
-
-**Meaning:** Determines which restaurant receives each order.
-
-### F15 — Destination zone choice
-**Formula:** `P(intra-zone) = 0.90`; otherwise, draw an inter-zone destination using distance tiers (see F16).
-
-**Meaning:** Destination zone choice.
-
-### F16 — Radius-based inter-zone logic
-**Formula:**
-- Near zone if `d < 8 km` (share `0.90`).
-- Far zone if `8 ≤ d ≤ 12 km` (share `0.10`).
-- Exclude zones if `d > 12 km`.
-- Within each tier, `w_z = demand_w_z / Σ demand_w`.
-- `combined = [0.90 · near_w ∥ 0.10 · far_w]`, then renormalise.
-
-**Meaning:** Radius-based inter-zone destination selection.
-
-### F17 — Estimated food-ready time
-**Formula:** `estimated_ready = timestamp + prep_time × 60`
-
-**Meaning:** Calculates when the food is expected to be ready.
-
-### F18 — SLA deadline
-**Formula:** `sla_deadline = timestamp + 2100 s`
-
-**Meaning:** 35-minute service-level agreement (SLA).
-
-### F19 — Order value
-**Formula:**
-- `σ = 0.5`
-- `μ = ln(379) − σ²/2`
-- `value = max(150, LogNormal(μ, σ))`
-
-**Meaning:** Order value. Subtracting `σ²/2` makes the mean equal to 379.
-
-### F20 — Batch window
-**Formula:** `BATCH_WINDOW_SEC = 120`
-
-**Meaning:** Midpoint of the cited 60–180-second range.
+**Meaning:** Hourly rate drawn at random for the 5 spike hours (12, 13, 19, 20, 21). The expected daily total is the sum of the 5 spike draws plus 9 × 775 (about 16,900 in the run shown), and the simulated order count (16,856) comes from random order generation around those rates.
 
 ---
 
